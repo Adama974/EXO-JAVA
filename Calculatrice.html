@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATRICE</title>
+    <link rel="stylesheet" href="calculatrice.css">
+    
+</head>
+<body>
+    <form action="" method="post">
+      <fieldset>
+       <div id="A">
+         <div>
+
+          <label >Premier Nombre </label>
+          <input type="number" id="N1" name="nombre1" required placeholder="Saisir Nombre 1">
+
+        </div>
+           <br><br> <br><br> <br> <br> <br>
+          
+        <div >
+
+          <label >Deuxieme Nombre</label>
+          <input type="number" id="N2" name="nombre2" required placeholder="Saisir Nombre 2">
+
+        </div>
+       <br><br><br><br><br><br><br>
+    
+        <button type="button" onclick="CALCUL()">AFFICHER</button>
+        <br><br><br>
+
+          <div id="resultat"> </div>
+      </div>
+    </fieldset>
+  </form>
+
+<script>
+ function CALCUL() {
+   var PremierNombre = document.getElementById("N1").value;
+   var DeuxiemeNombre = document.getElementById("N2").value;
+   document.getElementById("resultat").textContent = 
+   "La somme est : " + (parseFloat(PremierNombre) + parseFloat(DeuxiemeNombre) +  
+   "         "   +   "La multiplication est : " + (PremierNombre * DeuxiemeNombre) + 
+   "         " + "La division est : " + (PremierNombre / DeuxiemeNombre) +
+   "         " + "Le modulo des deux nombres est : " + (PremierNombre % DeuxiemeNombre) 
+      ) ; 
+       
+       
+
+   
+ }
+
+ 
+
+ 
+</script>
+
+</body>
+
+</html>
